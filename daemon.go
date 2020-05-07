@@ -440,7 +440,8 @@ func main() {
 	for {
 		select {
 		case ev := <-watcher.Events:
-			if ev.Op&fsnotify.Remove == fsnotify.Remove || ev.Op&fsnotify.Write == fsnotify.Write || ev.Op&fsnotify.Create == fsnotify.Create {
+			fmt.Println(ev.Op)
+			if ev.Op&fsnotify.Remove == fsnotify.Remove || ev.Op&fsnotify.Write == fsnotify.Write || ev.Op&fsnotify.Create == fsnotify.Create || ev.Op&fsnotify.Chmod == fsnotify.Chmod {
 				base := filepath.Base(ev.Name)
 
 				// Assume it is a directory and track it.
