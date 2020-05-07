@@ -1,5 +1,7 @@
 # Very simple Compile Daemon for Go [![GoDoc](https://godoc.org/github.com/githubnemo/CompileDaemon?status.png)](http://godoc.org/github.com/githubnemo/CompileDaemon)
 
+原来没有基于 chmod 的判断，现在加上了。
+
 Watches your .go files in a directory and invokes `go build` if
 a file changed. Nothing more.
 

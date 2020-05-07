@@ -440,7 +440,6 @@ func main() {
 	for {
 		select {
 		case ev := <-watcher.Events:
-			fmt.Println(ev.Op)
 			if ev.Op&fsnotify.Remove == fsnotify.Remove || ev.Op&fsnotify.Write == fsnotify.Write || ev.Op&fsnotify.Create == fsnotify.Create || ev.Op&fsnotify.Chmod == fsnotify.Chmod {
 				base := filepath.Base(ev.Name)
 
