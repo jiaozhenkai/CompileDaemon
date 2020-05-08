@@ -109,7 +109,7 @@ func (g *globList) Matches(value string) bool {
 var (
 	flagPattern         = flag.String("pattern", FilePattern, "Pattern of watched files")
 	flagCommand         = flag.String("command", "", "Command to run and restart after build")
-	flagCommandStop     = flag.Bool("command-stop", false, "Stop command before building")
+	flagCommandStop     = flag.Bool("command-stop", true, "Stop command before building")
 	flagRecursive       = flag.Bool("recursive", true, "Watch all dirs. recursively")
 	flagBuild           = flag.String("build", "go build", "Command to rebuild after changes")
 	flagBuildDir        = flag.String("build-dir", "", "Directory to run build command in.  Defaults to directory")
